@@ -1,0 +1,22 @@
+<h1>GERENCIADOR DE CONTEUDO - DASHBOARD</h1>
+<a href="http://127.0.0.1/ProjetoMVC/?pagina=admin&metodo=create">Criar Publicação</a>
+<br>
+<br>
+<hr>
+<br>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>TITULO</th>
+        <th>ALTERAÇÃO</th>
+        <th>DELEÇÃO</tH>
+    </tr>
+    {% for postagem in postagens %}
+    <tr>
+        <td>{{postagem.id}}</td>
+        <td>{{postagem.titulo}}</td>
+        <td> <a href="http://127.0.0.1/ProjetoMVC/?pagina=admin&metodo=change&id={{postagem.id}}">ALTERAÇÃO</a> </td>
+        <td><a href="http://127.0.0.1/ProjetoMVC/?pagina=admin&metodo=delete&id={{postagem.id}}">DELEÇÃO</a></td>
+    </tr>
+    {% endfor %}
+</table>

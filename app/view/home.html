@@ -1,0 +1,12 @@
+<section>
+    <h1>Postagens:</h1>
+
+    {% for postagem in postagens %}
+    <article>
+        <header>
+            <h2><a href="http://127.0.0.1/ProjetoMVC/?pagina=post&id={{postagem.id}}">{{postagem.titulo}}</a></h2>
+        </header>
+        <p>{{postagem.conteudo}}</p>
+    </article>
+    {% endfor %}
+</section>
